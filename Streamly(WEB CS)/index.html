@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Streamly is a responsive streaming discovery website for movies and series.">
+  <title>Streamly | Movies, Series & Trending Stories</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>▶</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav">
+    <a href="#home" class="brand" aria-label="Streamly home">STREAM<span>LY</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav" aria-label="Primary navigation">
+      <a href="#home">Home</a>
+      <a href="#movies">Movies</a>
+      <a href="#series">Series</a>
+      <a href="#trending">Trending</a>
+      <a href="#account">Account</a>
+    </nav>
+    <div class="nav-right">
+      <button id="openSearch" class="icon" aria-label="Search">⌕</button>
+      <button class="avatar" id="accountButton" aria-label="Open account">S</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero">
+      <div class="hero-copy">
+        <span class="kicker">STREAMLY ORIGINAL</span>
+        <h1>Stories worth<br><em>staying up for.</em></h1>
+        <p>Premium movies, addictive series, and fresh stories curated for your next great watch.</p>
+        <div class="actions">
+          <button class="btn primary" data-play="The Last Horizon">▶ Watch now</button>
+          <a class="btn ghost" href="#details">ⓘ More info</a>
+        </div>
+        <div class="meta">2026 <b>•</b> 16+ <b>•</b> 2h 08m <b>•</b> Sci-Fi / Adventure</div>
+      </div>
+    </section>
+
+    <section class="intro section">
+      <div>
+        <span class="kicker">DESIGNED FOR DISCOVERY</span>
+        <h2>Everything you want to watch,<br>in one beautiful place.</h2>
+      </div>
+      <p>Streamly is a concept streaming platform focused on clean navigation, strong visuals, and a premium viewing experience.</p>
+    </section>
+
+    <section id="trending" class="section">
+      <div class="section-head">
+        <div><span class="kicker">POPULAR RIGHT NOW</span><h2>Trending now</h2></div>
+        <button class="text-btn" id="showAll">View all →</button>
+      </div>
+      <div id="trendingGrid" class="grid"></div>
+    </section>
+
+    <section id="movies" class="section">
+      <div class="section-head">
+        <div><span class="kicker">HANDPICKED</span><h2>Popular movies</h2></div>
+      </div>
+      <div id="moviesGrid" class="grid"></div>
+    </section>
+
+    <section id="series" class="section">
+      <div class="section-head">
+        <div><span class="kicker">BINGE-WORTHY</span><h2>Series you'll love</h2></div>
+      </div>
+      <div id="seriesGrid" class="grid"></div>
+    </section>
+
+    <section id="details" class="details section">
+      <div class="detail-art" aria-hidden="true"></div>
+      <div class="detail-copy">
+        <span class="kicker">STREAMLY ORIGINAL</span>
+        <h2>The Last Horizon</h2>
+        <div class="meta">2026 • 16+ • 2h 08m • Sci-Fi / Adventure</div>
+        <p>When a deep-space signal reaches Earth, a small crew is sent beyond the known frontier. What they discover could change humanity forever.</p>
+        <div class="actions">
+          <button class="btn primary" data-play="The Last Horizon">▶ Play</button>
+          <button class="btn ghost" id="addWatch">＋ My List</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="video-section section" aria-labelledby="preview-heading">
+      <span class="kicker">FEATURED PREVIEW</span>
+      <h2 id="preview-heading">Watch a Streamly preview</h2>
+      <video controls poster="https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&w=1600&q=85">
+        <source src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4" type="video/mp4">
+        <source src="media/streamly-preview.webm" type="video/webm">
+        <track src="media/captions.vtt" kind="captions" srclang="en" label="English captions" default>
+        <track src="media/descriptions.vtt" kind="descriptions" srclang="en" label="English descriptions">
+        Your browser does not support the HTML video element.
+      </video>
+      <p class="media-note">The MP4 is a placeholder demonstration source. Replace it with your own project video before final submission.</p>
+    </section>
+
+    <section class="schedule section" aria-labelledby="schedule-heading">
+      <span class="kicker">THIS WEEK ON STREAMLY</span>
+      <h2 id="schedule-heading">Release schedule</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>Upcoming Streamly featured releases</caption>
+          <thead><tr><th>Day</th><th>Title</th><th>Category</th></tr></thead>
+          <tbody>
+            <tr><td>Monday</td><td>Neon City</td><td>Movie</td></tr>
+            <tr><td>Tuesday</td><td>After Dark</td><td>Series</td></tr>
+            <tr><td>Wednesday</td><td>The Signal</td><td>Movie</td></tr>
+            <tr><td>Thursday</td><td>Wild Earth</td><td>Series</td></tr>
+            <tr><td>Friday</td><td>The Last Horizon</td><td>Movie</td></tr>
+            <tr><td>Saturday</td><td>Parallel</td><td>Series</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mobile-schedule section" aria-label="Mobile release schedule">
+      <h2>This week</h2>
+      <ul>
+        <li><strong>Mon</strong> — Neon City · Movie</li>
+        <li><strong>Tue</strong> — After Dark · Series</li>
+        <li><strong>Wed</strong> — The Signal · Movie</li>
+        <li><strong>Thu</strong> — Wild Earth · Series</li>
+        <li><strong>Fri</strong> — The Last Horizon · Movie</li>
+        <li><strong>Sat</strong> — Parallel · Series</li>
+      </ul>
+    </section>
+
+    <section class="feedback section" aria-labelledby="feedback-heading">
+      <div>
+        <span class="kicker">STAY CONNECTED</span>
+        <h2 id="feedback-heading">Tell us what you want to watch.</h2>
+        <p>Use this prototype form to demonstrate Streamly's responsive form layout.</p>
+      </div>
+      <form id="feedbackForm">
+        <fieldset>
+          <legend>Viewer feedback</legend>
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+          <label for="interest">Favorite category</label>
+          <select id="interest" name="interest">
+            <option>Movies</option><option>Series</option><option>Documentaries</option><option>Animation</option>
+          </select>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="What should Streamly add next?"></textarea>
+          <div class="form-actions"><button class="btn primary" type="submit">Submit</button><button class="btn ghost" type="reset">Reset</button></div>
+          <p id="formStatus" role="status"></p>
+        </fieldset>
+      </form>
+    </section>
+
+    <section class="login-card section" id="account">
+      <div>
+        <span class="kicker">STREAM WITHOUT LIMITS</span>
+        <h2>Your next favorite is waiting.</h2>
+        <p>Create a Streamly account to save favorites, build your watchlist, and continue watching anywhere.</p>
+      </div>
+      <button class="btn primary" id="createAccount">Create account</button>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand">STREAM<span>LY</span></div>
+    <p>Responsive streaming website concept • Midterm to Final Project</p>
+    <div class="footer-links">
+      <a href="sitemap.html">Site Map</a>
+      <a href="#account">Account</a>
+      <a href="https://www.facebook.com/" aria-label="Facebook">Facebook</a>
+      <a href="https://www.instagram.com/" aria-label="Instagram">Instagram</a>
+    </div>
+  </footer>
+
+  <div id="searchModal" class="modal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="searchHeading">
+      <button class="close" data-close="searchModal" aria-label="Close search">×</button>
+      <span class="kicker">SEARCH STREAMLY</span>
+      <h2 id="searchHeading">Find something to watch</h2>
+      <label class="sr-only" for="search">Search movies and series</label>
+      <input id="search" placeholder="Search movies and series...">
+      <div id="results"></div>
+    </div>
+  </div>
+
+  <div id="playerModal" class="modal" aria-hidden="true">
+    <div class="player-card" role="dialog" aria-modal="true" aria-labelledby="playerTitle">
+      <button class="close" data-close="playerModal" aria-label="Close player">×</button>
+      <div class="player-screen"><div class="big-play">▶</div></div>
+      <span class="kicker">NOW PLAYING</span>
+      <h2 id="playerTitle">The Last Horizon</h2>
+      <p>Interactive prototype player screen.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
